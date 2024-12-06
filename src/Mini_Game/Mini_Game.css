@@ -1,0 +1,67 @@
+
+  .container {
+    position: relative;
+    user-select: none;
+    /* Prevent default text selection */
+  }
+  
+  .circle {
+    position: relative;
+    width: 75px;
+    /* Diameter of the circle */
+    height: 75px;
+    /* Diameter of the circle */
+    border-radius: 50%;
+    border: 30px solid gray;
+    /* Thickness of the circle border */
+    margin: auto;
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  .letter {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 50%;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    transform-origin: center center;
+    /* Center point around which rotation occurs */
+    user-select: none;
+  }
+  
+  
+  
+  .letter.selected {
+    background-color: cyan;
+  }
+  
+  .svg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Allow pointer events to pass through */
+    z-index: 2;
+    /* Ensure lines are drawn on top */
+    /* Temporary border to debug */
+  }
+  
+  .word-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-weight: bold;
+    color: #333;
+    z-index: 3;
+    /* Ensure the word is visible on top of everything */
+  }
